@@ -20,8 +20,18 @@ public class LineComparison {
 				float y2 = sc.nextFloat();
 
 				System.out.println();
+				double l1 = getLength(x1, y1, x2, y2);
+				double l2 = getLength(x3, y3, x4, y4);
+
+				String lengthL1 = String.format("%.02f", l1);
+				String lengthL2 = String.format("%.02f", l2);
 				
-				System.out.printf("The length of line L1 (" + x1 + ", " + y1 + ") " + "and " + "(" + x2 + ", " + y2 + ") " + "is %.2f", getLength(x1, y1, x2, y2));
+				if (lengthL1.equals(lengthL2)) {
+						System.out.println("The lines L1 and L2 are equal");
+				} else {
+						System.out.println("The lines are not equal");
+
+				}
 
 		}
 
